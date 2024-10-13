@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-// Question 15) Valid traingle or not
+// Question 15) Valid triangle or not
 
 #include <iostream>
 using namespace std;
@@ -14,23 +13,4 @@ int main(){
     cout << "Not a valid triangle";
     return 0;
 }
-
-=======
-// Question 15) Valid traingle or not
-
-#include <iostream>
-using namespace std;
-
-int main(){
-    int a,b,c;
-    cout << "Enter 3 sides of triangle : " << endl;
-    cin >> a >> b >> c;
-    if (a + b > c && a + c > b && b + c > a)
-    cout << "Valid triangle";
-    else
-    cout << "Not a valid triangle";
-    return 0;
-}
-
->>>>>>> e169126 (day-1)
  
