@@ -6,7 +6,7 @@ int main(){
     int rowCount;
     cin >> rowCount;
     
-    // FULL pyramid                                               /* Pattern --> 9 */
+    // FULL pyramid                                               /* Pattern --> 9 FULL pyramid */
     // Outer loop --> row                                                                 
     for (int row = 0; row < rowCount; row++){                       //             * 
         // spaces                                                   //           *   *   
@@ -26,7 +26,7 @@ int main(){
 /***************************** Step 18) **********************************/
 #include <iostream>
 using namespace std;
-int main()                                    /* Pattern --> 10 */
+int main()                                    /* Pattern --> 10 Square pyramid */
 {
     for (int i = 0; i < 6; i++)                // ******
     {                                          // ******
@@ -57,7 +57,7 @@ int main ()
         {
             for (int col = 0; col < colCount; col++) {
                 cout << "* ";
-            }                                              /* Pattern --> 11 */
+            }                                              /* Pattern --> 11 Hollow Square pyramid */
         }
         else{
             //remaining middle rows                       // * * * * * * 
@@ -106,7 +106,7 @@ int main(){
   cin >> rowCount;
   
   // for loop 
-  for (int row = 0; row < rowCount; row++){          /* Pattern --> 13 */
+  for (int row = 0; row < rowCount; row++){          /* Pattern --> 13 Inverted below Star Pyramid*/
     // spaces
     for (int col = 0; col < row; col++){              // * * * * * * * *
       cout << " ";                                    //  * * * * * * *
@@ -132,7 +132,7 @@ int main(){
        // space
         for (int col = 0; col < rowCount - row - 1; col++){
              cout << " ";
-        }                                            /* Pattern --> 14 */
+        }                                            /* Pattern --> 14 Inverted full pyramid  */
          // star
          for (int col = 0; col < row + 1; col++){    //         *
             cout << "* ";                            //        * *
