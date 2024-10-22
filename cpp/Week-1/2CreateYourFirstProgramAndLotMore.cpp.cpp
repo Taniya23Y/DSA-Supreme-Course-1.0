@@ -151,10 +151,10 @@ int main(){
 
 /***************   step 14)    ******************/
 #include <iostream>
-using namespace std;
-int main(){
-       // type casting
-    char ch = 234432;
+using namespace std;      // warning: overflow in conversion from 'int' to 'char' 
+int main(){              // changes value from '234432' to ''\37777777700'' [-Woverflow]
+    // type casting     //   5 |     char ch = 234432;           
+    char ch = 234432;  // |               ^~~~~~
     int x = (int) ch;
     cout << ch << endl;
     return 0;

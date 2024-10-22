@@ -157,50 +157,58 @@ int main(int argc, char const *argv[])
     for (int i = 0; i < 5; i = i + 1)
     {
         cout << "Taniya Yadav" << endl;     // 1
-    }
+    } //answer-> Taniya Yadav Taniya Yadav Taniya Yadav Taniya Yadav Taniya Yadav 
 
     for (int i = 0; i < 5; i = i + 1)
     {
         cout << i << endl;                 // 2
-    }
+    } // answer -> 0 1 2 3 4
 
     for (int i = 5; i > 0; i = i - 1)     
     {
         cout << i << endl;                // 3
-    }
+    } // answer -> 5 4 3 2 1
 
     for (int i = 1; i <= 10; i = i + 1)
     {
         cout << i << endl;                  // 4
-    }
+    } // answer -> 2 4 6 8 10 12 14 16 18 20
 
     for (int i = 0; i <= 5; i = i + 2)
     {
         cout << i << endl;                 // 5
-    }
+    } // answer -> 0 2 4
 
     for (int i = 1; i <= 5; i = i + 2)
     {
         cout << i << endl;                 // 6
-    }
+    } // answer -> 1 3 5
 
     for (int i = 1; i < 10; i = i * 2)
     {
         cout << i << endl;                 // 7
-    }
+    } // answer -> 1 2 4 8
     
     for (int i = 100; i > 0; i = i / 2)
     {
         cout << i << endl;                 // 8
-    }
+    } // answer -> 100 50 25 12 3 1
 
     
     for (int i = 5; (i >= 0 && i <= 10); i = i + 1)
     {
         cout << i << endl;                 // 9
-    }
+    } // answer -> 5 6 7 8 9 10
+
+
+    int i = 0;
+    for( ; ; ){             // 10
+        if(i < 5)
+        cout << i << endl;    
+        i = i+1;             
+    } // answer -> 0 1 2 3 4 
        
-     return 0;
+    return 0;
  }
 
 /************ step 7) ************************/
@@ -209,9 +217,9 @@ using namespace std;
 int main(int argc, char const *argv[])
 { 
     int n;
-    if (cin >> n)
-    {
-       cout << "Taniya" << endl;
+    if (cin >> n)                    // answer
+    {                                // 2 
+       cout << "Taniya" << endl;     // Taniya
     }
     
     return 0;
@@ -223,9 +231,9 @@ using namespace std;
 int main(int argc, char const *argv[])
 { 
     int n;
-    if (cout << n)
-    {
-       cout << "Taniya" << endl;
+    if (cout << n)                 // answer 
+    {                              // 0Taniya
+       cout << "Taniya" << endl;  
     }
     
     return 0;
