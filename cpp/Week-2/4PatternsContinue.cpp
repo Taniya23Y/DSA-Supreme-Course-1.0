@@ -56,7 +56,7 @@ int main ()
         if ( row == 0 || row == rowCount-1)
         {
             for (int col = 0; col < colCount; col++) {
-                cout << "* ";
+               cout << "* ";
             }                                              /* Pattern --> 11 Hollow Square pyramid */
         }
         else{
@@ -65,7 +65,7 @@ int main ()
             cout << "* ";                                 // *         * 
             // spaces                                     // *         * 
             for (int i = 0; i < colCount - 2; i += 1){    // *         * 
-                cout << "  ";                             // * * * * * *
+               cout << "  ";                              // * * * * * *
             }             
             // last star 
             cout << "* ";
@@ -83,9 +83,9 @@ int main(){
     int rowCount;
     cin >> rowCount;
     // for loop
- for (int row = 0; row < rowCount; row++){
-   for (int col = 0; col < rowCount; col++){                /* Pattern --> 12 */
-   if(col == 0 || col == 0 || col == rowCount - row - 1){
+ for (int row = rowCount; row >= 1; row--){
+   for (int col = 1; col <= row; col++){                /* Pattern --> 12 */
+   if( row == rowCount || row == col ||col == 1 ){
                cout << "*";                                  // ******
             }                                                // *   *
         else {                                               // *  *
@@ -106,7 +106,7 @@ int main(){
   cin >> rowCount;
   
   // for loop 
-  for (int row = 0; row < rowCount; row++){          /* Pattern --> 13 Inverted below Star Pyramid*/
+  for (int row = 0; row < rowCount; row++){          /* Pattern --> 13 Inverted half Star Pyramid*/
     // spaces
     for (int col = 0; col < row; col++){              // * * * * * * * *
       cout << " ";                                    //  * * * * * * *
@@ -167,7 +167,7 @@ int main(){
        // space
         for (int col = 0; col < rowCount - row - 1; col++){
              cout << " ";
-        }                                                 /* Pattern --> 15 */
+        }                                                 /* Pattern --> 15 Hollow Diamond*/
          // star
          for (int col = 0; col < 2*row + 1; col++){      //         *
   // if first character and last character is * then     //        * *
@@ -221,7 +221,7 @@ int main(){
                cout << "* ";
           }
           // spaces--> 1 part -2                    
-          for (int col = 0; col < 2*row+1; col++){        /* Pattern --> 16 */
+          for (int col = 0; col < 2*row+1; col++){        /* Pattern --> 16 Flipped solid diamond*/
               cout << "  ";
            }                                             // * * * * * *   * * * * * *
           // stars --> 1 part - 3                        // * * * * *       * * * * *
@@ -263,7 +263,7 @@ int main(){
        // number
        for (int col = 0; col < row + 1; col++){
           cout << row+1;
-          // star                                         /* Pattern --> 17 */
+          // star                                         /* Pattern --> 17 Fancy  pattern #2*/
           // if last character
           if (col != row){                                 // 1
                cout << "*";                                // 2*2
@@ -293,10 +293,10 @@ int main(){
 using namespace std;
 int main(){
      int rowCount;
-     cin >> rowCount;                                     /* Pattern --> 18 */
+     cin >> rowCount;                                     /* Pattern --> 18 Alphabet palindrome pyramid*/
      // for loop--->Alphabet palindrome pyramid
      for (int row = 0; row < rowCount; row++){             // A
-          int col;                                         // ABA
+                                                           // ABA
         for (int col = 0; col < row+1; col++){             // ABCBA
           int ans = col + 1;                               // ABCDCBA
           char ch = ans + 'A' - 1;                         // ABCDEDCBA
@@ -317,7 +317,7 @@ int main(){
 
 /***************************** Step 27) **********************************/
 #include <iostream>
-using namespace std;                                        /* Pattern --> 19 */
+using namespace std;                                        /* Pattern --> 19 Numeric hollow half pyramid*/
 int main(){
      int rowCount;                                           // 1
      cin >> rowCount;                                        // 12
@@ -340,7 +340,7 @@ int main(){
 
 /***************************** Step 28) **********************************/
 #include <iostream>
-using namespace std;                                             /* Pattern --> 20 */
+using namespace std;                                             /* Pattern --> 20 numeric hollow Inverted pyramid*/
 int main(){
      int rowCount;                                               // 123456
      cin >> rowCount;                                            // 1   6
@@ -373,7 +373,7 @@ int main(){
          for (int col = 0; col < k; col++){
             if (col < rowCount - row - 1)
             {
-               cout << " ";                                      /* Pattern --> 22 */
+               cout << " ";                                      /* Pattern --> 22 Numeric palindrome equilateral pyramid*/
             }
             else if(col <= rowCount - 1){                       //      1
                cout << c;                                       //     121
@@ -400,7 +400,7 @@ int main(){
 using namespace std;
 int main(){
      int rowCount;
-     cin >> rowCount;                                             /* Pattern --> 23 */
+     cin >> rowCount;                                             /* Pattern --> 23 Solid half diamond*/
 
      // for loop --> Solid half diamond
      for (int row = 0; row < 2*rowCount-1; row++){                   // *
@@ -421,7 +421,7 @@ int main(){
 
 /***************************** Step 31) **********************************/
 #include <iostream>
-#include <assert.h>                                              /* Pattern --> 24 */
+#include <assert.h>                                              /* Pattern --> 24 Fancy pattern #1*/
 using namespace std;
 int main(){                                                      // ********1********
      int rowCount;                                               // *******2*2*******
@@ -444,6 +444,24 @@ int main(){                                                      // ********1***
      }
      cout << endl;
    }
+
+   //* another way - 2
+   for(int row = 1; row <= rowCount; row++){
+     // spaces
+     for(int spaces = rowCount - 1; spaces > 0; spaces--){
+          cout << "*";
+     }
+     // number
+     for(int col = 1; col <= row; col++){
+          cout << row;
+          if(col < row) cout << "*";
+     }
+          // spaces
+     for(int spaces = rowCount - 1; spaces > 0; spaces--){
+          cout << "*";
+     }
+     cout << endl;
+   }
 return 0;
 }
 
@@ -453,30 +471,23 @@ using namespace std;
 int main(){
      int rowCount;
      cin >> rowCount;
-     int c = 1;
+     int condition = 1;
      // for loop --> Fancy pattern #2(2)
-     for (int row = 0; row < rowCount; row++){                      /* Pattern --> 25 */
+     for (int row = 0; row < rowCount; row++){                      /* Pattern --> 25 Fancy pattern #2(2)*/
         for (int col = 0; col <= row; col++){
-          cout << c;                                                  // 1
-          c++;                                                        // 23
-          if (col < row){                                             // 456
-               cout << "*";                                           // 78910
-          }                                                           // 78910
+          cout << condition;                                          // 1
+          condition++;                                                // 23                                                        // 78910
         }                                                             // 456
-        cout << endl;                                                 // 23
-     }                                                                // 1
-        // cout << "c: " << c << endl;                                
-       // shrinking phrase                                            
-       int start = c - rowCount;                                      
+        cout << endl;                                                 // 78910
+     }                                                                // 78910
+        // cout << "c: " << c << endl;                                // 456
+       // shrinking phrase                                            // 23
+       int start = condition - rowCount;                              // 1   
        for (int row = 0; row < rowCount; row++){       
          int k = start;
          for (int col = 0; col <= rowCount-row-1; col++){
            cout << k;
-           k++;
-           if (col <  rowCount-row-1){
-               cout << "*";
-           }
-           
+           k++;           
          }
           start = start - (rowCount - row - 1);
           cout << endl;
@@ -496,7 +507,7 @@ int main(){
        int condition = row <= rowCount/2 ? 2*row : 2*(rowCount-row-1);
        for (int col = 0; col <= condition; col++){
           if (col <= condition/2){
-               cout<< "*";                                /* Pattern --> 26 */
+               cout<< "*";                                /* Pattern --> 26 fancy pattern #3*/
             cout << col+1 << "*";                         
           }                                               // *
           else{                                           // *1*
@@ -512,7 +523,7 @@ int main(){
 /***************************** Step 34) **********************************/
 #include <iostream>
 using namespace std;
-int main(){                                               /* Pattern --> 27 */ 
+int main(){                                               /* Pattern --> 27 floyd's Triangle */ 
      int rowCount;                                      
      cin >> rowCount;                                     // 1
      // for loop ---> floyd's Triangle                    // 2 3
@@ -531,7 +542,7 @@ int main(){                                               /* Pattern --> 27 */
 #include <iostream>
 using namespace std;
 int main(){
-     int rowCount;                                             /* Pattern --> 28 */
+     int rowCount;                                             /* Pattern --> 28 pascal's Triangle */
      cin >> rowCount;                                          // 1
      // for loop --> pascal's Triangle                         // 1 1
      for (int row = 1; row <rowCount; row++){                  // 1 2 1
@@ -548,7 +559,7 @@ int main(){
 /***************************** Step 36) **********************************/ 
 #include <iostream>
 using namespace std;
-int main(){                                                                 /* Pattern --> 28 */
+int main(){                                                                 /* Pattern --> 28 Butterfly pattern  */
      int rowCount;                                             
      cin >> rowCount;                                                         // *         *
      // for loop --> Butterfly pattern                                        // **       **

@@ -5,7 +5,7 @@ int main(){
      int rowCount;
      cin >> rowCount;
      // for loop
-     for (int row = 0; row < rowCount; row++){                   /* Pattern --> 29 */
+     for (int row = 0; row < rowCount; row++){                   /* Pattern --> 29 Numeric full pyramid*/
         // spaces                                                
         for (int col = 0; col < rowCount-row-1; col++){         //     1
           cout << " ";                                          //    232
@@ -39,9 +39,9 @@ int main(){
        for (int col = 0; col < rowCount - row - 1; col++){
            cout << " ";
       }
-      // Numbers with spaces between 
+      // Numbers with spaces in between 
       int start = 1;
-      for (int col = 0; col < 2*row+1; col++){                    /* Pattern --> 29 */
+      for (int col = 0; col < 2*row+1; col++){                    /* Pattern --> 29 Numeric Hollow pyramid*/
          // first row and last row
         if (row == 0 || row == rowCount - 1){                    //     1
             if (col % 2 == 0){                                   //    1 2
@@ -58,7 +58,7 @@ int main(){
             if (col == 0){
                 cout << 1;
             }
-            else if(col == 2*rowCount+1-1){
+            else if(col == 2*row){
             cout << row+1;
             }
             else {
