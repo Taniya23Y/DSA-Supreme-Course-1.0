@@ -352,8 +352,8 @@ int main(){
 
     int rowCount;
     cin >> rowCount;
-                                                               /* Pattern --> 5 */
-     // Half pyramid 
+                                                               /* Pattern --> 5  Half pyramid */
+                                                               
                                                               // *
     for (int row = 0; row < rowCount; row++)                  // *  *
     {                                                         // *  *  * 

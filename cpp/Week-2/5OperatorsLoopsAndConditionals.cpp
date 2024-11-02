@@ -41,7 +41,7 @@ int main(){
       }
       // Numbers with spaces in between 
       int start = 1;
-      for (int col = 0; col < 2*row+1; col++){                    /* Pattern --> 29 Numeric Hollow pyramid*/
+      for (int col = 0; col < 2*row+1; col++){                    /* Pattern --> 30 Numeric Hollow pyramid*/
          // first row and last row
         if (row == 0 || row == rowCount - 1){                    //     1
             if (col % 2 == 0){                                   //    1 2
