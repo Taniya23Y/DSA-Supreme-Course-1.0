@@ -80,7 +80,7 @@ int main(){
      int a = 5;
      int b = 7;
      int c = a&b;
-     cout << c;
+     cout << c; // 5
      return 0;
 }
 
@@ -94,7 +94,7 @@ int main(){
      int a = 5;
      int b = 7;
      int c = a|b;
-     cout << c;
+     cout << c; // 7
      return 0;
 }
 
@@ -108,9 +108,9 @@ int main(){
      int b = 7;
      int c = (~a);
      int d = (~b);
-     cout << c;
+     cout << c; // -6
      cout << endl;
-     cout << d;
+     cout << d; // -8
      return 0;
 }
 
@@ -123,7 +123,7 @@ int main(){
     int a = 5;
     int b = 7;
     int c = a^b;
-    cout << c;
+    cout << c; // 2
   return 0;
 }
 
@@ -135,7 +135,7 @@ int main(){
     // Bitwise operator----> Left Shift (<<)
     int a = 5;
     int b = 7;
-    int c = a<<b;
+    int c = a<<b; // 640
     cout << c;
   return 0;
 }
@@ -148,7 +148,7 @@ int main(){
    // Bitwise operator----> Right Shift (>>)
     int a = 9;
     int b = 17;
-    int c = a>>b;
+    int c = a>>b; // 0
     cout << c;
   return 0;
 }
@@ -161,7 +161,7 @@ int main(){
      // Pre Increment Operator --> (++a)
     int a = 5;
     int c =++a;
-    cout << c;
+    cout << c;  // 6
   return 0;  
 } 
 
@@ -173,7 +173,7 @@ int main(){
     // Post Increment Operator --> (a++)
     int a = 5;
     int c =a++;
-    cout << c;
+    cout << c; // 5
   return 0;  
 }
 
@@ -185,7 +185,7 @@ int main(){
     // Pre Decrement Operator --> (--a)
     int a = 5;
     int c =--a;
-    cout << c;
+    cout << c; // 4
   return 0;  
 } 
 
@@ -197,7 +197,7 @@ int main(){
     // Post Increment Operator --> (a--)
     int a = 5;
     int c =a--;
-    cout << c;
+    cout << c; // 5
   return 0;  
 } 
 
@@ -208,11 +208,11 @@ int main(){
 
     // Break Keyword;
     // for loop
-    for (int i = 0; i < 5; i++)
-    {
-        if(i == 3){
-        // cout << "Taniya" << endl;
-        break;
+    for (int i = 0; i < 5; i++)                // answer
+    {                                          // Taniya
+        if(i == 3){                            // Taniya
+        // cout << "Taniya" << endl;           // Taniya
+        break;                                 // Yadav
         }
         cout << "Taniya" << endl;
     }
@@ -227,11 +227,11 @@ int main(){
 
     // continue Keyword;
     // for loop
-    for (int i = 0; i < 5; i++)
-    {
-        if(i == 2 || i == 1){
-        // cout << "Taniya" << endl;
-       continue;
+    for (int i = 0; i < 5; i++)                // answer
+    {                                          // 0
+        if(i == 2 || i == 1){                  // 3
+        // cout << "Taniya" << endl;           // 4
+       continue;                               // Yadav
         }
         cout << i << endl;
     }
@@ -245,12 +245,11 @@ using namespace std;
 //Global variable
 int globalVariable = 10;
 void myFunction() {
-    cout << "Global variable Value: " << globalVariable << endl;
+  cout << "Global variable Value: " << globalVariable << endl;
 }
 int main(){
-
-    // Variable Scoping
-     myFunction(); 
+  // Variable Scoping
+  myFunction(); // Global variable Value: 10
   return 0;  
 } 
 
@@ -258,14 +257,13 @@ int main(){
 #include <iostream>
 using namespace std;
 void myFunction() {
-    // Local scope
-    int LocalVariable = 20;
-    cout << "Localvariable Value: " << LocalVariable << endl;
+  // Local scope
+  int LocalVariable = 20;
+  cout << "Localvariable Value: " << LocalVariable << endl;
 }
 int main(){
-
-    // Variable Scoping
-     myFunction(); 
+  // Variable Scoping
+  myFunction(); 
   return 0;
 }
 
@@ -274,14 +272,14 @@ int main(){
 using namespace std;
 int main(){
 
-    // Variable Scoping
-    // Block scope
-    int x = 5;
-    {
-        int y = 10;
-        cout << "Inner Block Variable Value: "  << y << endl;
-    }
-     cout << "Outer Block Variable Value: "  << x << endl;
+  // Variable Scoping
+  // Block scope
+  int x = 5;
+  {
+    int y = 10;
+    cout << "Inner Block Variable Value: "  << y << endl;
+  }
+    cout << "Outer Block Variable Value: "  << x << endl;
   return 0;
 }
 
@@ -289,35 +287,35 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-     int day;
-     cin >> day;
-     string dayNum;
-    // switch case
-    switch (day)
+  int day;
+  cin >> day;
+  string dayNum;
+  // switch case
+  switch (day)
     {
     case 1:
-        dayNum = "Monday";
-        break;
+      dayNum = "Monday";
+      break;
     
     case 2:
-        dayNum = "Tuesday";
-        break;
+      dayNum = "Tuesday";
+      break;
 
     case 3:
-        dayNum = "Wednesday";
-        break;
+      dayNum = "Wednesday";
+      break;
 
     case 4:
-        dayNum = "Thursday";
-        break;
+      dayNum = "Thursday";
+      break;
     
     case 5:
-        dayNum = "Friday";
-        break;
+      dayNum = "Friday";
+      break;
 
     default:
-        dayNum = "Invalid day";
-        break;
+      dayNum = "Invalid day";
+      break;
     }
     cout << "The day is: " << dayNum << endl;
   return 0;
