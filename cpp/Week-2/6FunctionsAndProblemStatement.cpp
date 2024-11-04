@@ -36,12 +36,13 @@ void printNumber (int num){
 }
 int main(){
     int a = 5;
-    cout << "Address of a: " << &a << endl;
-    printNumber(a);
+    cout << "Address of a: " << &a << endl;  // Address of a: 0x61ff0c
+    printNumber(a);                          // 5
     return 0;
 }
 
 /************************* step 3) ************************************/
+//* Question 1) --> Write a function to add 2 numbers
 #include <iostream>
 using namespace std;
 // function declaration
@@ -50,7 +51,6 @@ int add(int a, int b){
     return result;
 }
 int main(){
-    // Question --> Write a function to add 2 numbers
     int a;
     cout << "Enter the value of a: " << endl;
     cin >> a;
@@ -60,12 +60,13 @@ int main(){
     cin >> b;
 
     // function call
-     int sum = add(a,b);
-     cout<< "Addition result is: " << sum << endl; 
+    int sum = add(a,b);
+    cout<< "Addition result is: " << sum << endl; 
     return 0;
 }
 
 /************************* step 4) ************************************/
+//* Question 2) --> Write a function to Find max number
 #include <iostream>
 using namespace std;
 // function declaration
@@ -81,12 +82,9 @@ int findMax(int num1, int num2, int num3){
     }
     else {
         return num3;
-    }
-    
-    
+    }  
 }
 int main(){
-    // Question --> Write a function to Find max number
     int a;
     cout << "Enter the value of a: " << endl;
     cin >> a;
@@ -106,6 +104,8 @@ int main(){
 }
 
 /************************* step 5) ************************************/
+//* Question 3) --> Write a function to counting 1 to N
+
 #include <iostream>
 using namespace std;
 // function declare + define
@@ -118,7 +118,6 @@ void printCounting(int n){
     cout << endl;
 }
 int main(){
-      // Question --> Write a function to counting 1 to N
     int n;
     cout << "Enter the value of n: " << endl;
     cin >> n;
@@ -130,6 +129,7 @@ int main(){
 }
 
 /************************* step 6) ************************************/
+//* Question 4) --> Write a function to find student marks and grade problem 
 #include <iostream>
 using namespace std;
 // function declare + define
@@ -147,7 +147,6 @@ int getGrade(int marks){
 }
 
 int main(){
-    // Question --> Write a function to find student marks and grade problem 
     int marks;
     cout << "Enter the marks: " << endl;
     cin >> marks;
@@ -192,6 +191,7 @@ int main(){
 }
 
 /************************* step 7) ************************************/
+//* Question 5) --> Sum of Even number upto N
 #include <iostream>
 using namespace std;
 // function declare + define
@@ -257,10 +257,11 @@ int main(){
 
 
 /************************* step 8) ************************************/
+//* question 6) --> write a function of area of circle
 #include <iostream>
 using namespace std;
 // function declare + define 
-float circleArea(float radius){           /* write a function of area of circle */
+float circleArea(float radius){           
  
    float area = 3.14 * radius *radius;   
    return area; 
@@ -277,9 +278,10 @@ int main(){
 }
 
 /************************* step 9) ************************************/
+//* Question 7) --> find no. is even or odd
 #include <iostream>
 using namespace std;
-int getEvenOdd(int num1){         /* find no. is even or odd */
+int getEvenOdd(int num1){         
     int Even = 0;
     int odd = 0;
     if (num1 % 2 == 0){
@@ -302,9 +304,10 @@ int main(){
 }
 
 /************************* step 10) ************************************/
+//* Question 8) --> Find factorial of a number
 #include <iostream>
 using namespace std;
-// function declare + define       /* Find factorial of a number*/
+// function declare + define       
 int checkFactorial(int num1){
     int fact = 1;
     for (int i = 1; i <=num1; i++)
@@ -326,9 +329,10 @@ int main(){
 }
 
 /************************* step 11) ************************************/
+//* Question 9) -->Check a number is prime or not
 #include <iostream>
 using namespace std;
-// function declare + define      /* Check a number is prime or not*/
+// function declare + define     
 bool checkPrime(int num1){
     int i = 2;
     for (int i = 2; i < num1; i++)
@@ -358,9 +362,10 @@ int main(){
 }
 
 /************************* step 12) ************************************/
+//* Question 10) --> Print all Prime number from 1 to N 
 #include <iostream>
 using namespace std;
-// function declare + define      /* Print all number from 1 to N */
+// function declare + define      
 bool printPrime(int num1){
     int i = 2;
     for (int i = 2; i < num1; i++)
@@ -381,7 +386,7 @@ int main(){
    
     for (int i = 1; i <= num1; i++)
     {
-         bool ans = printPrime(i);
+       bool ans = printPrime(i);
        if (ans)
        {
         cout << i << " ";
@@ -391,10 +396,11 @@ int main(){
 }
 
 /************************* step 13) ************************************/
+//* Question 12) --> Print all digits of given number
 #include <iostream>
 using namespace std;
 // function declare + define
-int printDigit(int num1){           /* Print all digits of given number */ 
+int printDigit(int num1){          
     int ans = 0;
     while (num1 > 0)
     {
@@ -403,7 +409,7 @@ int printDigit(int num1){           /* Print all digits of given number */
       num1 = num1 / 10;
     }
     cout << endl;
-        return ans;
+    return ans;
 }
 
 int main(){                      
@@ -418,10 +424,11 @@ int main(){
     return 0;
 }
 
- /************************* step 13) ************************************/
+/************************* step 13) ************************************/
+//* Question 13) --> create a number using digits 
 #include <iostream>
 using namespace std;
- // function declare + define    /* create a number using digits */
+ // function declare + define    
 int createNumber(int digits[], int size) {
     int ans = 0;
     for (int i = 0; i < size; i++) {
@@ -441,9 +448,10 @@ int main(){
 }
 
 /************************* step 14) ************************************/
+//* Question 14) --> Print number of set bit.
 #include <iostream>  
 using namespace std;
-int getSetBits(int number) {           /* Print number of set bit. */
+int getSetBits(int number) {          
     int ans = 0;
     while (number > 0) {
        ans += number & 1; // Check if the least significant bit is set
@@ -461,11 +469,12 @@ int main() {
     return 0;
 }
 
-// /************************* step 14) ************************************/
+/************************* step 14) ************************************/
+//* Question 15) --> Print binary equivalent to decimal number. 
 #include <iostream>  
 #include <bitset>
 using namespace std;
-int getBinaryEquivalentToDecimal(int number) {           /* Print binary equivalent to decimal number. */
+int getBinaryEquivalentToDecimal(int number) {           
     cout << "Binary equivalent of " << number << " is: ";
     bitset<sizeof(number) * 8> binary(number);
     cout << binary << endl;
@@ -481,9 +490,10 @@ int main() {
 }
 
 /************************* step 15) ************************************/
+//* Question 16) --> Convert distance in KM to MILES. 
 #include <iostream>  
 using namespace std;
-double convertKMtoMILES(int kilometers) {           /* Convert distance in KM to MILES. */
+double convertKMtoMILES(int kilometers) {          
     double Miles = kilometers * 0.62137119; // conversion factor
     return Miles;
 }
@@ -498,9 +508,10 @@ int main() {
 }
 
 /************************* step 16) ************************************/
+//* Question 17) --> Print Reverse number 
 #include <iostream>
 using namespace std;
-// function declare + define       /* Print Reverse number */  
+// function declare + define      
 int printReverse(int num1){
     int ans = 0;
     while (num1 > 0)
@@ -524,10 +535,11 @@ int main(){
 }
 
 /************************* step 16) ************************************/
+//* Question 18) --> Convert C to F 
 #include <iostream>
 using namespace std;
 double ConvertCelsiusToFahrenheit( double Celsius){
-      double fahrenheit = Celsius * 9 / 5 + 32;       /* Convert C to F */
+      double fahrenheit = Celsius * 9 / 5 + 32;       
       return fahrenheit;
 }
 int main(){
@@ -541,6 +553,7 @@ int main(){
 }
 
 /************************* step 17) ************************************/
+//* Question 19) --> Convert Decimal to binary and reverse it 
 #include <iostream>
 using namespace std;   // first way
 int DecimalToBinaryMethod( int num1){
@@ -611,11 +624,12 @@ int main(){
 }
 
 /************************* step 18) ************************************/
+//* Question 20) --> Convert Binary to decimal and reverse it 
 #include <iostream>
 #include <math.h>      // fourth way
 using namespace std;
 int BinaryToDecimalMethod( int num1){
-        int decimal = 0;                      /* Convert Binary to decimal and reverse it */
+        int decimal = 0;                      
         int i = 0;
         while (num1){
            int bit = num1 % 10;
